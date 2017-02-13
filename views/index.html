@@ -36,7 +36,6 @@
     <script src="javascripts/heatmap.min.js"></script>
     <script src="javascripts/HeatLayer.js"></script> 
     <script src="javascripts/leaflet-heatmap.js"></script>
-    <!--<script src="javascripts/map.js"></script>-->
     <script>
       var coors = <%- coordinates%>
       var n = <%- length%>
@@ -54,14 +53,6 @@
         datas.push({lat:coors[i][1],lng:coors[i][0],count:coors[2]});
       }
       var testData={max:8,data:datas};
-
-
-var cfg={"radius":0.0001,"maxOpacity":.9,"scaleRadius":true,"useLocalExtrema":true,latField:'lat',lngField:'lng',valueField:'count'};// radius:改变heatmap的半径
-
-    var heatmapLayer=new HeatmapOverlay(cfg);
-    heatmapLayer.addTo(map);
-    heatmapLayer.setData(testData);
-         //co2=data[i]["CO2"];  
-    </script>
+      var cfg={"radius":0.0001,"maxOpacity":.9,"scaleRadius":true,"useLocalExtrema":true,latField:'lat',lngField:'lng',valueField:'count'};
   </body>
 </html>

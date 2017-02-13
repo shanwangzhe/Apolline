@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 var models = require("./models");
 
 for(var m in models){ 
-	mongoose.model(m,new Schema(models[m]));//new定义一个schema, model(,)将schema发布为model
+	mongoose.model(m,new Schema(models[m]));
 }
 
 module.exports = { 
@@ -13,7 +13,7 @@ module.exports = {
 };
 
 var _getModel = function(type){ 
-	return mongoose.model(type);//通过名字索引
+	return mongoose.model(type);
 };
 
 
