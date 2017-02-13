@@ -30,11 +30,9 @@
         </div>
       </div>
     </nav>
-
     <div id="mapLille1"  style="height:100%; width:100%"></div>
     <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
     <script src="javascripts/heatmap.min.js"></script>
-    <script src="javascripts/HeatLayer.js"></script> 
     <script src="javascripts/leaflet-heatmap.js"></script>
     <script>
       var coors = <%- coordinates%>
@@ -54,5 +52,9 @@
       }
       var testData={max:8,data:datas};
       var cfg={"radius":0.0001,"maxOpacity":.9,"scaleRadius":true,"useLocalExtrema":true,latField:'lat',lngField:'lng',valueField:'count'};
+      var heatmapLayer=new HeatmapOverlay(cfg);    
+      heatmapLayer.addTo(map);    
+     heatmapLayer.setData(testData);
+    </script>
   </body>
 </html>
