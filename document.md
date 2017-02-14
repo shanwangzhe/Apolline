@@ -28,15 +28,13 @@
 		-user.js
 		-login.js
 		-logout.js
-		-config.js: ajouter et supprimer un capture
+		-config.js
 	-views
 		-config.html
 		-error.html
 		-home.html
 		-index.html
 		-login.html
-		-register.html
-
 ---
 ##MongoDB
 Dans la ficher model.js, j'ai definit le schéma de user et capture. Et puis, on propose les fonctions de login/logout pour user(login.html, login.js,logout.js). 
