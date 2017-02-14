@@ -39,7 +39,7 @@
 
 ---
 ##MongoDB
-Dans la ficher model.js, j'ai definit le schéma de user et capture. Et puis, on propose les fonctions de login/logout pour user(login.html, login.js,logout.js) pour user. 
+Dans la ficher model.js, j'ai definit le schéma de user et capture. Et puis, on propose les fonctions de login/logout pour user(login.html, login.js,logout.js). 
 
 Après authentification, dans la page config(config.js, config.html), on peut ajouetr une capture par cliquer la place qu'on veux déployer la capture sur la carte. On peut aussi supprimer une carte par clique la marquer de la capture.
 
