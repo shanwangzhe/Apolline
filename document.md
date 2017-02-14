@@ -39,19 +39,21 @@
 
 ---
 ##MongoDB
-Dans la ficher model.js, j'ai definit le schéma de user et capture. Et puis, on propose les fonctions de login/logout pour user(login.html, login.js,logout.js).  Pour l'instant, il y a deux compte dans le base de donnée:
-
+Dans la ficher model.js, j'ai definit le schéma de user et capture. Et puis, on propose les fonctions de login/logout pour user(login.html, login.js,logout.js) pour user. 
 
 Après authentification, dans la page config(config.js, config.html), on peut ajouetr une capture par cliquer la place qu'on veux déployer la capture sur la carte. On peut aussi supprimer une carte par clique la marquer de la capture.
 
-Pour éviter autre personne faire ces opération, je ne propose pas la fonction register dans cette web application. Donc si on veux ajouetr user(admin), on peut le faire directement dans le mongodb:
+Pour éviter autre personne faire ces opération, je ne propose pas la fonction register dans cette web application. Comme j'ai effacé tous les fichers de base de donnée, il n'y a plus de compte pour tester. Donc vous devez ajouetr un user(admin) directement dans le mongodb:
 
 ```
 cd <mongodb installation dir>
 ./bin/mongo
 use nodedb
-db.users.insert({name:"y",password:"y"}) 
+db.users.insert({name:"x",password:"x"}) 
 ```
+
+D'allier, pour voir le effet de heatmap, vous devez acces à la page config et ajouter une capture qui a le même nom de location dans le influxDB. Par exemple: inria, bureau107.
+
 ---
 ##InfluxDB
 Pour afficher un heatmap, il y a quatre étaps:
